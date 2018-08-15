@@ -1,6 +1,6 @@
 # Docker Mosquitto image for Raspberry Pi
 
-This image contains [Eclipse Mosquitto](http://mosquitto.org) in an Alpine base image.
+This image contains Open Source MQTT Broker [Eclipse Mosquitto](http://mosquitto.org) in an [Alpine](https://hub.docker.com/r/_/alpine/) base image.
 
 To run:
 ```
