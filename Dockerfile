@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 LABEL Description="MQTT docker image for RasPi"
 
 RUN apk --no-cache add mosquitto
