@@ -1,6 +1,6 @@
 # Docker Mosquitto image for Raspberry Pi
 
-This image contains Open Source MQTT Broker [Eclipse Mosquitto](http://mosquitto.org) in an [Alpine](https://hub.docker.com/r/_/alpine/) base image.
+This image contains Open Source MQTT Broker [Eclipse Mosquitto](http://mosquitto.org) in an [Debian armhf](https://www.debian.org/releases/stretch/armhf/) base image.
 
 ## How to run:
 ```
@@ -11,7 +11,7 @@ Exposes Port 1883 (MQTT) and 9001 (Websocket MQTT)
 
 Alternatively you can use volumes to make the changes persistent and change the configuration.
 ```
-# place your mosquitto.conf in /srv/mqtt/config/
+# place your mosquitto.conf in .../mqtt_config/_data/
 # NOTE: You have to change the permissions of the directories
 # to allow the user to read/write to data and log and read from
 # config directory
@@ -19,9 +19,9 @@ Alternatively you can use volumes to make the changes persistent and change the 
 # Better use "-u" with a valid user id on your docker host
 
 docker run -ti -p 1883:1883 -p 9001:9001 \
--v mqtt/config:/mqtt/config:ro \
--v mqtt/log:/mqtt/log \
--v mqtt/data/:/mqtt/data/ \
+-v mqtt_config:/mqtt/config:ro \
+-v mqtt_log:/mqtt/log \
+-v mqtt_data/:/mqtt/data/ \
 --name mqtt volubel/rpi-docker-mqtt
 ```
 
