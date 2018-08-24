@@ -2,6 +2,8 @@
 FROM multiarch/debian-debootstrap:armhf-stretch
 #MAINTAINER name <email-address>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 #RUN apt-get update && apt-get install -y wget
 RUN apt-get update && apt-get install -my wget apt-transport-https apt-utils gnupg
 
