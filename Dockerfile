@@ -3,7 +3,7 @@ FROM multiarch/debian-debootstrap:armhf-stretch
 #MAINTAINER name <email-address>
 
 #RUN apt-get update && apt-get install -y wget
-RUN apt-get update && apt-get install -my wget gnupg apt-transport-https apt-utils
+RUN apt-get update && apt-get install -my wget apt-transport-https apt-utils gnupg
 
 ## refer to http://repo.mosquitto.org/debian/readme.txt
 # add Debian repo key to keyring
